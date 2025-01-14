@@ -28,3 +28,9 @@ A Python-based file converter script to process images in various formats. This 
 
 ## Supported Formats
 * **Images:** JPG, JPEG, and PNG.
+
+## Features to Add
+1. [ ] Most popular image formats.
+2. [ ] Most popular document formats.
+3. [ ] Most popular video formats.
+4. [ ] The abilty to convert from context menu by simply right clicking on a file/folder then select convert, and then a small window will pop up asking for more details.
