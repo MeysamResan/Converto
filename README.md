@@ -1,6 +1,10 @@
 # File Converter
 
-A Python-based file converter script to process images in various formats. This tool supports format conversion, quality adjustments, and resizing of images. It is designed to work seamlessly for single images or entire folders.
+## Introduction
+
+A Python-based file converter script, a versatile and user-friendly tool designed to make file processing simple and efficient. This script supports various types of files, including images and beyond, offering capabilities such as format conversion, quality adjustments, and resizing. Whether you're working with single files, multiple files, or even entire folders, this tool is designed to handle it all effortlessly.
+
+I created this script out of a need for a free, offline solution to convert files without relying on a web browser, dedicated apps, or other complex setups. It’s designed to integrate directly into your workflow by allowing you to select files or folders and initiate the conversion process directly from the context menu. With this convenient and efficient approach, you can convert files anytime, anywhere, without additional hassle.
 
 ## Features
 
@@ -26,7 +30,7 @@ A Python-based file converter script to process images in various formats. This 
   * Adjust the image quality (1-100, default is 85).
   * Optionally, resize the image by providing custom dimensions.
 
-## Supported Formats
+## Supported Files and Formats
 * **Images:** JPG, JPEG, and PNG.
 
 ## Features to Add
