@@ -38,25 +38,25 @@ I created this script out of a need for a free, offline solution to convert file
 
 ## Features to Add
 1. [ ] Most popular image formats.
-  1. [x] JPG/JPEG.
-  2. [x] PNG.
-  3. [x] BMP.
-  4. [x] ICO.
-  5. [x] GIF.
-  6. [ ] WebP.
+    1. [x] JPG/JPEG.
+    2. [x] PNG.
+    3. [x] BMP.
+    4. [x] ICO.
+    5. [x] GIF.
+    6. [ ] WebP.
 2. [ ] Most popular audio formats.
-  1. [ ] AAC.
-  2. [ ] MP3.
-  3. [ ] WAV.
+    1. [ ] AAC.
+    2. [ ] MP3.
+    3. [ ] WAV.
 3. [ ] Most popular video formats.
-  1. [ ] MKV.
-  2. [ ] MOV.
-  3. [ ] MP4.
-  4. [ ] WebM.
+    1. [ ] MKV.
+    2. [ ] MOV.
+    3. [ ] MP4.
+    4. [ ] WebM.
 4. [ ] Most popular document formats.
-  1. [ ] DOC.
-  2. [ ] DOCX.
-  3. [ ] ODT.
-  4. [ ] PDF.
+    1. [ ] DOC.
+    2. [ ] DOCX.
+    3. [ ] ODT.
+    4. [ ] PDF.
 5. [ ] A desktop application version with GUI.
 6. [ ] The abilty to convert from context menu by simply right clicking on a file/folder then select convert.
