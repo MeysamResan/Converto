@@ -11,7 +11,7 @@ I created this script out of a need for a free, offline solution to convert file
 * 📁 Batch Processing: Convert entire folders or individual files.
 * 🔄 Multi-format Support: Supports popular formats like JPG, PNG, BMP, GIF, and ICO.
 * 🖼️ Resize Images: Resize images during the conversion process.
-🎞️ GIF Handling:
+* 🎞️ GIF Handling:
   * Extract specific frames from animated GIFs.
   * Combine multiple images into a single animated GIF.
 * 🌟 User-Friendly: Includes prompts for easy file selection and configuration.
@@ -25,35 +25,35 @@ I created this script out of a need for a free, offline solution to convert file
    pip install -r requirements.txt
 ## Usage
 1. Select a file or folder for conversion.
-2. Choose the desired output format (JPG, JPEG, PNG, BMP, ICO, or GIF).
+2. Choose the desired output format.
 3. Adjust the image quality (1-100, default is 85).
 4. Optionally, resize the image by providing custom dimensions.
-4. Choose a path for new file(s)
+4. Choose a path for new file(s).
 ## Supported Files and Formats
-* **Images:** JPG, JPEG, PNG, BMP, ICO, and GIF.
+* **Images:** JPG, JPEG, PNG, BMP, ICO, GIF, and WebP.
 ## How Does it Work?
 <p align="center">
   <img src="assets/main_program_diagram.svg"/>
 </p>
 
 ## Features to Add
-1. [ ] Most popular image formats.
+1. [x] Most popular image formats:
     1. [x] JPG/JPEG.
     2. [x] PNG.
     3. [x] BMP.
     4. [x] ICO.
     5. [x] GIF.
-    6. [ ] WebP.
-2. [ ] Most popular audio formats.
+    6. [x] WebP.
+2. [ ] Most popular audio formats:
     1. [ ] AAC.
     2. [ ] MP3.
     3. [ ] WAV.
-3. [ ] Most popular video formats.
+3. [ ] Most popular video formats:
     1. [ ] MKV.
     2. [ ] MOV.
     3. [ ] MP4.
     4. [ ] WebM.
-4. [ ] Most popular document formats.
+4. [ ] Most popular document formats:
     1. [ ] DOC.
     2. [ ] DOCX.
     3. [ ] ODT.

@@ -3,7 +3,7 @@ from pathlib import Path
 from PIL import Image, ImageSequence
 
 # Supported formats
-SUPPORTED_FORMATS = ["jpg", "jpeg", "png", "bmp", "ico", "gif"]
+SUPPORTED_FORMATS = ["jpg", "jpeg", "png", "bmp", "ico", "gif", "webp"]
 
 def get_desktop_path():
     return os.path.join(os.path.expanduser("~"), "Desktop")
@@ -38,7 +38,25 @@ def process_image(input_file, output_file, quality, resize):
             if img.format == "GIF" and getattr(img, "is_animated", False):
                 total_frames = img.n_frames
                 print(f"This GIF has {total_frames} frames.")
-                frame_number = input("Enter the frame number to extract (leave blank for the first frame): ").strip()
+                frame_number = input("Enter the frame number to extract (type 'all' to extract all frames, leave blank for the first frame): ").strip()
+
+                if frame_number.lower() == "all":
+                    output_base = Path(output_file).stem
+                    output_dir = Path(output_file).parent
+                    output_dir.mkdir(parents=True, exist_ok=True)
+                    for frame_idx in range(total_frames):
+                        try:
+                            img.seek(frame_idx)
+                            frame_output = output_dir / f"{output_base}_frame{frame_idx}.{Path(output_file).suffix.strip('.')}"
+                            frame = img.copy()
+                            if resize:
+                                frame = frame.resize(resize)
+                            frame.save(frame_output)
+                            print(f"Saved frame {frame_idx} to {frame_output}")
+                        except EOFError:
+                            break
+                    return
+
                 frame_number = int(frame_number) if frame_number.isdigit() else 0
 
                 try:
@@ -83,6 +101,12 @@ def process_image(input_file, output_file, quality, resize):
                 img.save(output_file)
             elif output_file.endswith(".gif"):
                 img.save(output_file, optimize=True)
+            elif output_file.endswith(".webp"):
+                if img.mode in ("RGBA", "LA"):
+                    img = img.convert("RGBA")
+                else:
+                    img = img.convert("RGB")
+                img.save(output_file, quality=quality, optimize=True)
             print(f"File saved: {output_file}")
     except Exception as e:
         print(f"Error processing {input_file}: {e}")
