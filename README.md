@@ -31,6 +31,11 @@ I created this script out of a need for a free, offline solution to convert file
 4. Choose a path for new file(s)
 ## Supported Files and Formats
 * **Images:** JPG, JPEG, PNG, BMP, ICO, and GIF.
+## How Does it Work?
+<p align="center">
+  <img src="assets/main_diagram.svg"/>
+</p>
+
 ## Features to Add
 1. [ ] Most popular image formats.
 2. [ ] Most popular audio formats.
