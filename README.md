@@ -1,14 +1,6 @@
 <p align="center">
   <img src="assets/MXS2750.gif" alt="MXS2750"/>
 </p>
-<style>
-h1 {
-  color: #ff0000;
-}
-h2 {
-  color: #af0000;
-}
-</style>
 
 # Files Converter
 
