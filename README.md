@@ -33,7 +33,7 @@ I created this script out of a need for a free, offline solution to convert file
 * **Images:** JPG, JPEG, PNG, BMP, ICO, and GIF.
 ## How Does it Work?
 <p align="center">
-  <img src="assets/main_diagram.svg"/>
+  <img src="assets/main_program_diagram.svg"/>
 </p>
 
 ## Features to Add
