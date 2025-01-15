@@ -38,4 +38,5 @@ I created this script out of a need for a free, offline solution to convert file
 2. [ ] Most popular audio formats.
 3. [ ] Most popular video formats.
 4. [ ] Most popular document formats.
-5. [ ] The abilty to convert from context menu by simply right clicking on a file/folder then select convert, and then a small window will pop up asking for more details.
+5. [ ] A desktop application version with GUI.
+6. [ ] The abilty to convert from context menu by simply right clicking on a file/folder then select convert.
