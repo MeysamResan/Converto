@@ -2,7 +2,7 @@ from pydub import AudioSegment
 import os
 from pathlib import Path
 
-def process_audio(input_file, output_file, bitrate, channels, frequency, normalize):
+def process_audio(input_file, output_file, bitrate=None, channels=None, frequency=None, normalize=False):
     try:
         audio = AudioSegment.from_file(input_file)
         if normalize:
@@ -14,7 +14,7 @@ def process_audio(input_file, output_file, bitrate, channels, frequency, normali
         audio = audio.set_sample_width(2)
         export_params = {"format": "adts", "codec": "aac"}
         if bitrate:
-            export_params["bitrate"] = bitrate
+            export_params["bitrate"] = f"{bitrate}k"
         audio.export(output_file, **export_params)
         print(f"File saved: {output_file}")
     except Exception as e:

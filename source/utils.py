@@ -1,5 +1,3 @@
-import os
-
 SUPPORTED_FORMATS = ["bmp", "ico", "gif", "aac"]
 QUALITY_RANGE = (1, 100)
 BITRATE_MIN = 32
@@ -27,12 +25,18 @@ def validate_quality(input_quality, output_format):
     return validate_input(input_quality, int, QUALITY_RANGE)
 
 def validate_bitrate(input_bitrate):
+    if not input_bitrate:
+        return None
     return validate_input(input_bitrate, int, (BITRATE_MIN, BITRATE_MAX))
 
 def validate_channels(input_channels):
+    if not input_channels:
+        return None
     return validate_input(input_channels, int, valid_options=CHANNELS_OPTIONS)
 
 def validate_frequency(input_frequency):
+    if not input_frequency:
+        return None
     return validate_input(input_frequency, int, (FREQUENCY_MIN, FREQUENCY_MAX))
 
 def validate_resize(width, height):
