@@ -1,5 +1,6 @@
 import os
 
+# Validate the quality input for image formats
 def validate_quality(input_quality, output_format):
     if output_format in ["bmp", "ico", "gif", "aac"]:
         print(f"Quality adjustment is not supported for {output_format.upper()} format.")
@@ -14,6 +15,7 @@ def validate_quality(input_quality, output_format):
         print("Invalid input for quality. Please enter a number between 1 and 100.")
     return None
 
+# Validate the bitrate input for audio formats
 def validate_bitrate(input_bitrate):
     if not input_bitrate:
         return None
@@ -27,6 +29,7 @@ def validate_bitrate(input_bitrate):
         print("Invalid input for bitrate. Please enter a positive number.")
     return None
 
+# Validate the number of audio channels
 def validate_channels(input_channels):
     if not input_channels:
         return None
@@ -40,6 +43,7 @@ def validate_channels(input_channels):
         print("Invalid input for channels. Please enter 1 or 2.")
     return None
 
+# Validate the frequency input for audio formats
 def validate_frequency(input_frequency):
     if not input_frequency:
         return None
@@ -53,10 +57,11 @@ def validate_frequency(input_frequency):
         print("Invalid input for frequency. Please enter a positive number.")
     return None
 
-def validate_resize():
+# Validate the resize dimensions for images
+def validate_resize(width, height):
     try:
-        width = int(input("Enter the width: ").strip())
-        height = int(input("Enter the height: ").strip())
+        width = int(width)
+        height = int(height)
         return width, height
     except ValueError:
         print("Invalid dimensions provided.")

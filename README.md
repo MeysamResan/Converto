@@ -27,13 +27,13 @@ I created this script out of a need for a free, offline solution to convert file
 1. Select a file or folder for conversion.
 2. Choose the desired output format.
 3. Adjust the image quality (1-100, default is 85).
-4. Optionally, resize the image by providing custom dimensions.
-4. Choose a path for new file(s).
+4. Optionally, resize the image by providing custom dimensions (width and height).
+5. Choose a path for new file(s).
 ## Supported Files and Formats
 * **Images:** JPG, JPEG, PNG, BMP, ICO, GIF, and WebP.
 ## How Does it Work?
 <p align="center">
-  <img src="https://drive.google.com/file/d/1GCiH8ORE_tJKPJKwL2SllymAyOfpM6nk/view?usp=sharing"/>
+  <img src="https://drive.google.com/file/d/14HoGot9bGTv6UKpSmC3SJg2QvwLLMaBq/view?usp=sharing"/>
 </p>
 
 ## Features to Add

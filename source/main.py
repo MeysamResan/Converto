@@ -6,7 +6,9 @@ from audio_processing import process_audio, convert_folder_audio
 
 SUPPORTED_FORMATS = ["jpg", "jpeg", "png", "bmp", "ico", "gif", "webp", "aac"]
 DEFAULT_QUALITY = 85
+ICO_SIZES = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)]
 
+# Main function to handle user input and initiate the conversion process
 def main():
     input_path = input("Enter the path of the file or folder you want to convert: ").strip().strip('"')
     if not os.path.exists(input_path):
@@ -27,12 +29,28 @@ def main():
 
     resize = None
     if output_format in ["jpg", "jpeg", "png", "bmp", "ico", "gif", "webp"]:
-        resize_input = input("Do you want to resize? (yes/no, leave blank to keep original): ").strip().lower()
-        if resize_input in ["yes", "y"]:
-            resize = validate_resize()
-        elif resize_input not in ["no", "n", ""]:
-            print("Invalid input. Please enter 'yes', 'y', 'no', 'n', or leave blank to keep original.")
-            return
+        if output_format == "ico":
+            print("Choose a size for the ICO file:")
+            for idx, size in enumerate(ICO_SIZES):
+                print(f"{idx + 1}. {size[0]}x{size[1]}")
+            size_choice = input("Enter the number corresponding to the size: ").strip()
+            try:
+                size_choice = int(size_choice)
+                if 1 <= size_choice <= len(ICO_SIZES):
+                    resize = ICO_SIZES[size_choice - 1]
+                else:
+                    print("Invalid choice. Using default size.")
+            except ValueError:
+                print("Invalid input. Using default size.")
+        else:
+            resize_input = input("Do you want to resize? (yes/no, leave blank to keep original): ").strip().lower()
+            if resize_input in ["yes", "y"]:
+                width = input("Enter the width: ").strip()
+                height = input("Enter the height: ").strip()
+                resize = validate_resize(width, height)
+            elif resize_input not in ["no", "n", ""]:
+                print("Invalid input. Please enter 'yes', 'y', 'no', 'n', or leave blank to keep original.")
+                return
 
     bitrate = None
     channels = None
