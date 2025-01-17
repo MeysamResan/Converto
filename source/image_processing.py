@@ -2,26 +2,19 @@ import os
 from pathlib import Path
 from PIL import Image, ImageSequence
 
-# Process a single image file
 def process_image(input_file, output_file, quality, resize):
     try:
         with Image.open(input_file) as img:
-            # Handle animated GIFs separately
             if img.format == "GIF" and getattr(img, "is_animated", False):
                 handle_animated_gif(img, output_file, resize)
                 return
-
-            # Resize the image if requested
             if resize:
                 img = img.resize(resize)
-            
-            # Save the processed image
             save_image(img, output_file, quality)
             print(f"File saved: {output_file}")
     except Exception as e:
         print(f"Error processing {input_file}: {e}")
 
-# Handle the extraction of frames from an animated GIF
 def handle_animated_gif(img, output_file, resize):
     total_frames = img.n_frames
     print(f"This GIF has {total_frames} frames.")
@@ -56,7 +49,6 @@ def handle_animated_gif(img, output_file, resize):
     img.save(output_file)
     print(f"Extracted frame {frame_number} and saved to {output_file}")
 
-# Save the image with the appropriate settings based on the format
 def save_image(img, output_file, quality):
     if output_file.endswith((".jpg", ".jpeg")):
         if img.mode in ("RGBA", "LA"):
@@ -87,7 +79,6 @@ def save_image(img, output_file, quality):
             img = img.convert("RGB")
         img.save(output_file, quality=quality, optimize=True)
 
-# Convert all images in a folder to the specified format
 def convert_folder_images(input_folder, output_format, quality, resize):
     if output_format == "gif":
         combine_choice = input("Do you want to combine images into a single animated GIF? (yes/no): ").strip().lower()
@@ -105,7 +96,6 @@ def convert_folder_images(input_folder, output_format, quality, resize):
             output_file = os.path.join(root, f"converted_{Path(file).stem}.{output_format}")
             process_image(input_file, output_file, quality, resize)
 
-# Combine multiple images into a single animated GIF
 def combine_to_gif(input_folder, output_file, resize):
     images = []
     for root, _, files in os.walk(input_folder):
