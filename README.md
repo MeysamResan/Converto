@@ -2,7 +2,7 @@
   <img src="https://drive.google.com/uc?id=1bC6g3HK48BSHwwm4A-JYtX1J3j4Mwii-" />
 </p>
 
-# Files Converter
+# Converto
 ## Introduction
 A Python-based file converter script, a versatile and user-friendly tool designed to make file processing simple and efficient. This script supports various types of files, including images and beyond, offering capabilities such as format conversion, quality adjustments, and resizing. Whether you're working with single files, multiple files, or even entire folders, this tool is designed to handle it all effortlessly.
 
