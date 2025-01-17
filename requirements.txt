@@ -1,1 +1,5 @@
 Pillow==9.5.0
+pydub==0.25.1
+
+# Note: ffmpeg is required for audio processing.
+# Please install ffmpeg separately from https://ffmpeg.org/download.html

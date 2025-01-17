@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/MXS2750.gif"/>
+  <img src="https://drive.google.com/uc?id=1bC6g3HK48BSHwwm4A-JYtX1J3j4Mwii-" />
 </p>
 
 # Files Converter
@@ -45,7 +45,7 @@ I created this script out of a need for a free, offline solution to convert file
     5. [x] GIF.
     6. [x] WebP.
 2. [ ] Most popular audio formats:
-    1. [ ] AAC.
+    1. [x] AAC.
     2. [ ] MP3.
     3. [ ] WAV.
 3. [ ] Most popular video formats:
