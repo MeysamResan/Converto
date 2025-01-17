@@ -33,7 +33,7 @@ I created this script out of a need for a free, offline solution to convert file
 * **Images:** JPG, JPEG, PNG, BMP, ICO, GIF, and WebP.
 ## How Does it Work?
 <p align="center">
-  <img src="https://drive.google.com/uc?id=1okMHDfojWIj7WtgTXPz2YGHQJKxh8Ige" />
+  <img src="https://drive.google.com/uc?id=14HoGot9bGTv6UKpSmC3SJg2QvwLLMaBq" />
 </p>
 
 ## Features to Add
